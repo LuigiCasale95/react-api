@@ -3,10 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+    background-image: url(https://wallpaperset.com/w/full/6/1/b/131811.jpg);
+}
+h1 {
+  width: 100vh;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #B19147;
+  color: white;
+  font-size: 40px;
+}
 .container {
   max-width: 1400px;
-  background-color: blanchedalmond;
   min-height: 200px;
   margin: 0 auto;
+}
+.imgActor {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+}
+.cardActor {
+  background-color: rgb(216, 216, 216);
+  border: 2px solid black;
+}
+.riconoscimenti {
+  background-color: #B19147;
+  border-radius: 20px;
 }
