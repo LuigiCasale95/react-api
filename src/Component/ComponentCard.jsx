@@ -1,15 +1,21 @@
-export default function ComponentCard() {
+export default function ComponentCard(props) {
+
+    const {nome, anno, src, nazionalita, biografia, riconoscimenti } = props;
 
     return (
 
-/*         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div className="card" style={{width: "18rem"}}>
+            <img src={src} className="card-img-top" alt={nome} />
+                <div className="card-body">
+                    <h4 className="card-title">{nome}</h4>
+                    <h5 className="card-title">Nato il {anno}</h5>
+                    <h5 className="card-title">Nazionalità: {nazionalita}</h5>
+
+                    <p className="card-text">BIOGRAFIA: {biografia} </p>
+                    <p className="btn btn-primary">RICONOSCIMENTI: {riconoscimenti} </p>
+                </div>
             </div>
-        </div> */
+
 
     )
 }
