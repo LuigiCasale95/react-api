@@ -5,18 +5,18 @@ export default function MyMain() {
 
     const [actor, setActor] = useState([])
 
-    useEffect(() => {
-        useActorApi()
-    }
-, []);
     function useActorApi() {
         // eslint-disable-next-line no-undef
         axios.get ("https://lanciweb.github.io/demo/api/actors/")
-            .then((res) => setActor(res.data))
-            .catch(error => console.log(error)
-            
-        )
-    }
+        .then((res) => setActor(res.data))
+        .catch(error => console.log(error)
+        
+    )
+}
+useEffect(() => {
+    useActorApi()
+}
+, []);
 
 
 
