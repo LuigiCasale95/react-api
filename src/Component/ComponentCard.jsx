@@ -1,18 +1,18 @@
 export default function ComponentCard(props) {
 
-    const {nome, anno, src, nazionalita, biografia, riconoscimenti } = props;
+    const {name, birth_year,image, nationality, biography, awards } = props.attore;
 
     return (
 
         <div className="card text-center m-2 p-1 cardActor" style={{width: "18rem"}}>
-            <img src={src} className="card-img-top imgActor" alt={nome} />
+            <img src={image} className="card-img-top imgActor" alt={name} />
                 <div className="card-body">
-                    <h4 className="card-title">{nome}</h4>
-                    <h5 className="card-title">Nato il {anno}</h5>
-                    <h5 className="card-title">Nazionalità: {nazionalita}</h5>
+                    <h4 className="card-title">{name}</h4>
+                    <h5 className="card-title">Nato il {birth_year}</h5>
+                    <h5 className="card-title">Nazionalità: {nationality}</h5>
 
-                    <p className="card-text">BIOGRAFIA: {biografia} </p>
-                    <p className="riconoscimenti ">RICONOSCIMENTI: <br /> {riconoscimenti} </p>
+                    <p className="card-text">BIOGRAFIA: {biography} </p>
+                    <p className="riconoscimenti ">RICONOSCIMENTI: <br /> {awards} </p>
                 </div>
             </div>
 

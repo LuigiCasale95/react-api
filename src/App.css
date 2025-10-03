@@ -23,6 +23,7 @@ h1 {
   width: 100%;
   height: 300px;
   border-radius: 5px;
+  object-fit: contain;
 }
 .cardActor {
   background-color: rgb(216, 216, 216);

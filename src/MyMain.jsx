@@ -5,7 +5,7 @@ export default function MyMain() {
 
     const [actor, setActor] = useState([]) /* setto l'useState */
 
-    function useActorApi() {
+    function actorApi() {
         // eslint-disable-next-line no-undef
         axios.get ("https://lanciweb.github.io/demo/api/actors/") /* collego la API tramite l'axios */
         .then((res) => setActor(res.data)) /* setto il valore dell'api e lo collego a actor tramite il setActor */
@@ -14,7 +14,7 @@ export default function MyMain() {
     )
 }
 useEffect(() => { /* tramite use effect avvio la stampa (la funzione useActorApi) all'avvio della pagina */
-    useActorApi()
+    actorApi()
 }
 , []);// essendo questo valore vuoto la lista si aggionerà soltanto all'apertura della pagina, altrimenti si modificherebbe ad ogni aggiornamento dell'elemento selezionato 
 
@@ -32,13 +32,14 @@ useEffect(() => { /* tramite use effect avvio la stampa (la funzione useActorApi
                     {actor.map((attore) => ( /* Ciclo actor(contenente il valore della API) con il map */
                         <ComponentCard  /* Richiamo il componente card */
                         key={attore.id}/* Assegno i valore delle props tramite il valore del API ovvero actor */
-                        src={attore.image}
+                        attore={attore}
+                        /* src={attore.image}
                         nome={attore.name}
                         anno={attore.birth_year}
                         biografia={attore.biography}
                         nazionalita={attore.nationality}
-                        riconoscimenti={attore.awards}
-                        ></ComponentCard>
+                        riconoscimenti={attore.awards} */
+                        />
 
                     ))}
                 </div>
